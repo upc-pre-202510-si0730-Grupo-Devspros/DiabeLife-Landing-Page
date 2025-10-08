@@ -305,26 +305,29 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Button hover effects
+// Button and link hover effects
 document.addEventListener('DOMContentLoaded', () => {
     const buttons = document.querySelectorAll('.btn');
 
     buttons.forEach(btn => {
-        btn.addEventListener('mouseenter', () => {
-            btn.style.transform = 'translateY(-2px) scale(1.02)';
-        });
+        // Only apply to actual buttons, not links
+        if (btn.tagName === 'BUTTON') {
+            btn.addEventListener('mouseenter', () => {
+                btn.style.transform = 'translateY(-2px) scale(1.02)';
+            });
 
-        btn.addEventListener('mouseleave', () => {
-            btn.style.transform = 'translateY(0) scale(1)';
-        });
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = 'translateY(0) scale(1)';
+            });
 
-        btn.addEventListener('mousedown', () => {
-            btn.style.transform = 'translateY(0) scale(0.98)';
-        });
+            btn.addEventListener('mousedown', () => {
+                btn.style.transform = 'translateY(0) scale(0.98)';
+            });
 
-        btn.addEventListener('mouseup', () => {
-            btn.style.transform = 'translateY(-2px) scale(1.02)';
-        });
+            btn.addEventListener('mouseup', () => {
+                btn.style.transform = 'translateY(-2px) scale(1.02)';
+            });
+        }
     });
 });
 

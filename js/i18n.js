@@ -2,7 +2,7 @@
 
 class I18n {
     constructor() {
-        this.currentLang = 'es';
+        this.currentLang = 'en';
         this.translations = {};
         this.init();
     }
@@ -51,8 +51,7 @@ class I18n {
                     title: "Gestiona tu diabetes con inteligencia",
                     description: "Una plataforma integral que conecta pacientes con diabetes, médicos especialistas y una comunidad de apoyo. Monitorea, aprende y vive mejor con DiabeLife.",
                     cta: {
-                        primary: "Comenzar Ahora",
-                        secondary: "Ver Demo"
+                        primary: "Comenzar Ahora"
                     },
                     stats: {
                         users: "Usuarios Activos",
@@ -272,8 +271,7 @@ class I18n {
                     title: "Manage your diabetes with intelligence",
                     description: "A comprehensive platform that connects diabetes patients, specialist doctors and a support community. Monitor, learn and live better with DiabeLife.",
                     cta: {
-                        primary: "Get Started",
-                        secondary: "Watch Demo"
+                        primary: "Get Started"
                     },
                     stats: {
                         users: "Active Users",
