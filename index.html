@@ -532,49 +532,37 @@
          - Texto descriptivo debajo (en móvil) o al costado (en pantallas grandes)
          - Reemplaza los `VIDEO_ID_1` y `VIDEO_ID_2` por los IDs reales de YouTube
     ======================================== -->
-    <section class="videos" id="videos">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Videos</h2>
-                <p class="section-description">Abouy Team y About Product.</p>
+    <div class="videos__grid">
+
+        <div class="video-card">
+            <div class="video-wrapper">
+                <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/MBNFpJ1MNGU"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                </iframe>
             </div>
-
-            <div class="videos__grid">
-                <div class="video-card">
-                    <div class="video-wrapper">
-                        <!-- EMBED CORRECTO -->
-                        <iframe
-                                src="https://www.youtube.com/embed/Oo1iA90Pi_w"
-                                title="Video 1"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>
-                        </iframe>
-                    </div>
-                    <div class="video-caption">
-                        <h3>About Team</h3>
-                        <p>Escribir cualquier cosa</p>
-                    </div>
-                </div>
-
-                <div class="video-card">
-                    <div class="video-wrapper">
-                        <iframe
-                                src="https://www.youtube.com/embed/MBNFpJ1MNGU"
-                                title="Video 2"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen>
-                        </iframe>
-                    </div>
-                    <div class="video-caption">
-                        <h3>About Product</h3>
-                        <p>Escribir cualquier cosa</p>
-                    </div>
-                </div>
+            <div class="video-caption">
+                <h3>About Team</h3>
             </div>
         </div>
-    </section>
+
+        <div class="video-card">
+            <div class="video-wrapper">
+                <iframe width="560" height="315"
+                        src="https://www.youtube.com/embed/Oo1iA90Pi_w"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                </iframe>
+            </div>
+            <div class="video-caption">
+                <h3>About Product</h3>
+            </div>
+        </div>
+
+    </div>
 
     <!-- ========================================
              FOOTER - Pie de Página
