@@ -18,648 +18,648 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- ========================================
-         HEADER - Navegación Principal
-         ========================================
-         - Barra de navegación fija en la parte superior
-         - Logo y nombre de la marca DevsPros
-         - Menú de navegación con enlaces a secciones
-         - Selector de idioma (español/inglés)
-         - Botón de menú móvil (hamburguesa)
-         - Se mantiene visible al hacer scroll
-    ======================================== -->
-    <header class="header">
-        <nav class="nav container">
-            <div class="nav__brand">
-                <img src="images/LogoStartup.png" alt="DevsPros" class="nav__logo">
-                <span class="nav__title">DevsPros</span>
+<!-- ========================================
+     HEADER - Navegación Principal
+     ========================================
+     - Barra de navegación fija en la parte superior
+     - Logo y nombre de la marca DevsPros
+     - Menú de navegación con enlaces a secciones
+     - Selector de idioma (español/inglés)
+     - Botón de menú móvil (hamburguesa)
+     - Se mantiene visible al hacer scroll
+======================================== -->
+<header class="header">
+    <nav class="nav container">
+        <div class="nav__brand">
+            <img src="images/LogoStartup.png" alt="DevsPros" class="nav__logo">
+            <span class="nav__title">DevsPros</span>
+        </div>
+
+        <ul class="nav__menu" id="nav-menu">
+            <li class="nav__item">
+                <a href="#inicio" class="nav__link" data-i18n="nav.home">Inicio</a>
+            </li>
+            <li class="nav__item">
+                <a href="#caracteristicas" class="nav__link" data-i18n="nav.features">Características</a>
+            </li>
+            <li class="nav__item">
+                <a href="#faq" class="nav__link" data-i18n="nav.community">FAQ</a>
+            </li>
+            <li class="nav__item">
+                <a href="#suscripciones" class="nav__link" data-i18n="nav.pricing">Suscripciones</a>
+            </li>
+            <li class="nav__item">
+                <a href="#contacto" class="nav__link" data-i18n="nav.contact">Contacto</a>
+            </li>
+        </ul>
+
+        <div class="nav__actions">
+            <div class="language-switcher">
+                <button class="lang-toggle" id="langToggle">
+                    <span class="flag-icon">🇪🇸</span>
+                </button>
             </div>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+    <!-- Overlay para menú móvil -->
+    <div class="nav__overlay" id="nav-overlay"></div>
+</header>
 
-            <ul class="nav__menu" id="nav-menu">
-                <li class="nav__item">
-                    <a href="#inicio" class="nav__link" data-i18n="nav.home">Inicio</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#caracteristicas" class="nav__link" data-i18n="nav.features">Características</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#faq" class="nav__link" data-i18n="nav.community">FAQ</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#suscripciones" class="nav__link" data-i18n="nav.pricing">Suscripciones</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#contacto" class="nav__link" data-i18n="nav.contact">Contacto</a>
-                </li>
-            </ul>
-
-            <div class="nav__actions">
-                <div class="language-switcher">
-                    <button class="lang-toggle" id="langToggle">
-                        <span class="flag-icon">🇪🇸</span>
-                    </button>
+<!-- ========================================
+     HERO SECTION - Sección Principal/Banner
+     ========================================
+     - Primera impresión de la página
+     - Título principal con call-to-action
+     - Descripción del producto DevsPros
+     - Botones de acción (Comenzar/Ver Demo)
+     - Estadísticas importantes (usuarios, médicos, satisfacción)
+     - Ilustración animada con tarjetas flotantes
+======================================== -->
+<section class="hero" id="inicio">
+    <div class="hero__container container">
+        <div class="hero__content">
+            <h1 class="hero__title" data-i18n="hero.title">
+                Gestiona tu <span class="text-gradient">diabetes</span> con inteligencia
+            </h1>
+            <p class="hero__description" data-i18n="hero.description">
+                Una plataforma integral que conecta pacientes con diabetes, médicos especialistas y una comunidad de apoyo. Monitorea, aprende y vive mejor con DevsPros.
+            </p>
+            <div class="hero__actions">
+                <a href="https://diabelife-application.netlify.app/" target="_blank" class="btn btn--primary btn--large" data-i18n="hero.cta.primary">
+                    <i class="fas fa-rocket"></i>
+                    Comenzar Ahora
+                </a>
+            </div>
+            <div class="hero__stats">
+                <div class="stat">
+                    <h3 class="stat__number">50K+</h3>
+                    <p class="stat__label" data-i18n="hero.stats.users">Usuarios Activos</p>
                 </div>
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="fas fa-bars"></i>
+                <div class="stat">
+                    <h3 class="stat__number">1,200+</h3>
+                    <p class="stat__label" data-i18n="hero.stats.doctors">Médicos Certificados</p>
+                </div>
+                <div class="stat">
+                    <h3 class="stat__number">98%</h3>
+                    <p class="stat__label" data-i18n="hero.stats.satisfaction">Satisfacción</p>
                 </div>
             </div>
-        </nav>
-        <!-- Overlay para menú móvil -->
-        <div class="nav__overlay" id="nav-overlay"></div>
-    </header>
+        </div>
+        <div class="hero__image">
+            <div class="hero__illustration">
+                <div class="floating-card card-1">
+                    <i class="fas fa-heartbeat"></i>
+                    <span>120 mg/dL</span>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fas fa-calendar-check"></i>
+                    <span data-i18n="hero.floating.appointment">Cita: Dr. García</span>
+                </div>
+                <div class="floating-card card-3">
+                    <i class="fas fa-users"></i>
+                    <span data-i18n="hero.floating.community">Comunidad: 5 nuevos posts</span>
+                </div>
+                <div class="hero__main-graphic">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <!-- ========================================
-         HERO SECTION - Sección Principal/Banner
-         ========================================
-         - Primera impresión de la página
-         - Título principal con call-to-action
-         - Descripción del producto DevsPros
-         - Botones de acción (Comenzar/Ver Demo)
-         - Estadísticas importantes (usuarios, médicos, satisfacción)
-         - Ilustración animada con tarjetas flotantes
-    ======================================== -->
-    <section class="hero" id="inicio">
-        <div class="hero__container container">
-            <div class="hero__content">
-                <h1 class="hero__title" data-i18n="hero.title">
-                    Gestiona tu <span class="text-gradient">diabetes</span> con inteligencia
-                </h1>
-                <p class="hero__description" data-i18n="hero.description">
-                    Una plataforma integral que conecta pacientes con diabetes, médicos especialistas y una comunidad de apoyo. Monitorea, aprende y vive mejor con DevsPros.
+<!-- ========================================
+     FEATURES SECTION - Características Principales
+     ========================================
+     - Muestra las 5 funcionalidades principales de DevsPros
+     - 1. Comunidad Activa - Conexión entre pacientes y médicos
+     - 2. Reportes Médicos - Historial clínico digital
+     - 3. Gestión de Citas - Sistema inteligente de citas
+     - 4. Glucómetro Virtual - Monitoreo de glucosa (diseño especial)
+     - 5. Vida Saludable - Seguimiento de actividad física y alimentación
+     - Cada tarjeta incluye ícono, título, descripción y lista de características
+======================================== -->
+<section class="features" id="caracteristicas">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title" data-i18n="features.title">Características Principales</h2>
+            <p class="section-description" data-i18n="features.description">
+                Herramientas diseñadas específicamente para el manejo integral de la diabetes
+            </p>
+        </div>
+
+        <div class="features__grid">
+            <!-- Community Posts Feature -->
+            <div class="feature-card">
+                <div class="feature-card__icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <h3 class="feature-card__title" data-i18n="features.community.title">Comunidad Activa</h3>
+                <p class="feature-card__description" data-i18n="features.community.description">
+                    Conéctate con otros pacientes y médicos. Comparte experiencias, consejos y apoyo mutuo en nuestra comunidad global.
                 </p>
-                <div class="hero__actions">
-                    <a href="https://diabelife-frontend.netlify.app/" target="_blank" class="btn btn--primary btn--large" data-i18n="hero.cta.primary">
-                        <i class="fas fa-rocket"></i>
-                        Comenzar Ahora
+                <ul class="feature-card__list">
+                    <li data-i18n="features.community.feature1">Posts de médicos especializados</li>
+                    <li data-i18n="features.community.feature2">Experiencias de pacientes reales</li>
+                    <li data-i18n="features.community.feature3">Grupos temáticos por tipo de diabetes</li>
+                    <li data-i18n="features.community.feature4">Moderación médica profesional</li>
+                </ul>
+            </div>
+
+            <!-- Medical Reports Feature -->
+            <div class="feature-card">
+                <div class="feature-card__icon">
+                    <i class="fas fa-file-medical"></i>
+                </div>
+                <h3 class="feature-card__title" data-i18n="features.reports.title">Reportes Médicos</h3>
+                <p class="feature-card__description" data-i18n="features.reports.description">
+                    Los médicos pueden crear reportes detallados sobre el progreso de sus pacientes y compartir información vital.
+                </p>
+                <ul class="feature-card__list">
+                    <li data-i18n="features.reports.feature1">Historial clínico digital</li>
+                    <li data-i18n="features.reports.feature2">Seguimiento de glucosa</li>
+                    <li data-i18n="features.reports.feature3">Análisis de tendencias</li>
+                    <li data-i18n="features.reports.feature4">Reportes exportables</li>
+                </ul>
+            </div>
+
+            <!-- Appointments Feature -->
+            <div class="feature-card">
+                <div class="feature-card__icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h3 class="feature-card__title" data-i18n="features.appointments.title">Gestión de Citas</h3>
+                <p class="feature-card__description" data-i18n="features.appointments.description">
+                    Sistema inteligente de citas que facilita la comunicación entre médicos y pacientes.
+                </p>
+                <ul class="feature-card__list">
+                    <li data-i18n="features.appointments.feature1">Agenda automática de médicos</li>
+                    <li data-i18n="features.appointments.feature2">Recordatorios inteligentes</li>
+                    <li data-i18n="features.appointments.feature3">Teleconsultas disponibles</li>
+                    <li data-i18n="features.appointments.feature4">Historial de citas completo</li>
+                </ul>
+            </div>
+
+            <!-- Virtual Glucometer Feature (Diseño Especial) -->
+            <div class="feature-card">
+                <div class="feature-card__icon">
+                    <i class="fas fa-tint"></i>
+                </div>
+                <h3 class="feature-card__title" data-i18n="features.glucometer.title">Glucómetro Virtual</h3>
+                <p class="feature-card__description" data-i18n="features.glucometer.description">
+                    Monitorea tus niveles de glucosa en tiempo real con nuestro innovador glucómetro virtual integrado a la plataforma.
+                </p>
+                <ul class="feature-card__list">
+                    <li data-i18n="features.glucometer.feature1">Sincronización automática con dispositivos</li>
+                    <li data-i18n="features.glucometer.feature2">Alertas de niveles críticos</li>
+                    <li data-i18n="features.glucometer.feature3">Gráficos de tendencias en tiempo real</li>
+                    <li data-i18n="features.glucometer.feature4">Registro automático de mediciones</li>
+                </ul>
+            </div>
+
+            <!-- Healthy Lifestyle Feature (Nueva característica) -->
+            <div class="feature-card">
+                <div class="feature-card__icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <h3 class="feature-card__title" data-i18n="features.lifestyle.title">Vida Saludable</h3>
+                <p class="feature-card__description" data-i18n="features.lifestyle.description">
+                    Administra el registro y seguimiento de tu actividad física y alimentación diaria, con recomendaciones personalizadas para un estilo de vida saludable.
+                </p>
+                <ul class="feature-card__list">
+                    <li data-i18n="features.lifestyle.feature1">Seguimiento de pasos y ejercicios</li>
+                    <li data-i18n="features.lifestyle.feature2">Registro de alimentación diaria</li>
+                    <li data-i18n="features.lifestyle.feature3">Análisis de calorías y nutrientes</li>
+                    <li data-i18n="features.lifestyle.feature4">Recomendaciones personalizadas</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+     FAQ SECTION - Preguntas Frecuentes
+     ========================================
+     - Acordeón interactivo con preguntas y respuestas
+     - 5 preguntas principales sobre DevsPros
+     - Respuestas detalladas sobre funcionalidad, seguridad y uso
+     - Sistema de expansión/colapso con JavaScript
+     - Mejora la experiencia del usuario resolviendo dudas comunes
+======================================== -->
+<section class="faq" id="faq">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title" data-i18n="faq.title">Preguntas Frecuentes</h2>
+            <p class="section-description" data-i18n="faq.description">
+                Encuentra respuestas a las preguntas más comunes sobre DevsPros
+            </p>
+        </div>
+
+        <div class="faq__content">
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3 data-i18n="faq.questions.q1.question">¿Cómo puede DevsPros ayudarme a controlar mi diabetes?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.questions.q1.answer">DevsPros ofrece herramientas integrales para monitoreo continuo de glucosa, recordatorios de medicamentos, acceso a especialistas médicos y una comunidad de apoyo. Nuestros algoritmos inteligentes analizan tus patrones de glucosa para brindarte recomendaciones personalizadas.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3 data-i18n="faq.questions.q2.question">¿Es segura la información médica que comparto en la plataforma?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.questions.q2.answer">Absolutamente. DevsPros cumple con todas las regulaciones HIPAA y utiliza encriptación de nivel bancario para proteger tu información médica. Tus datos se almacenan en servidores seguros y nunca se comparten sin tu consentimiento explícito.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3 data-i18n="faq.questions.q3.question">¿Puedo usar DevsPros junto con mi médico actual?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.questions.q3.answer">¡Por supuesto! DevsPros está diseñado para complementar, no reemplazar, la atención médica tradicional. Puedes compartir fácilmente tus reportes y datos con tu médico actual, y muchos profesionales ya forman parte de nuestra red.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3 data-i18n="faq.questions.q4.question">¿Qué dispositivos de monitoreo son compatibles con DevsPros?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.questions.q4.answer">DevsPros es compatible con los principales dispositivos de monitoreo continuo de glucosa (CGM) como Dexcom, FreeStyle Libre, y medidores tradicionales. También se integra con aplicaciones de salud populares y dispositivos wearables.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <h3 data-i18n="faq.questions.q5.question">¿Puedo cancelar mi suscripción en cualquier momento?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p data-i18n="faq.questions.q5.answer">Sí, puedes cancelar tu suscripción en cualquier momento desde tu panel de usuario. No hay contratos a largo plazo ni penalizaciones por cancelación. Tu acceso continuará hasta el final del período de facturación actual.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+ PRICING SECTION - Planes de Suscripción
+ ========================================
+ - Muestra 3 planes de precios: Básico, Premium y Profesional
+ - Plan Básico ($10/mes) - Para comenzar el control de diabetes
+ - Plan Premium ($30/mes) - Más popular, con herramientas avanzadas
+ - Plan Profesional ($100/mes) - Para profesionales de la salud
+ - Cada plan incluye lista de características y botón de acción
+ - Garantía de 30 días incluida
+======================================== -->
+<section class="pricing" id="suscripciones">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title" data-i18n="pricing.title">Planes de Suscripción</h2>
+            <p class="section-description" data-i18n="pricing.description">
+                Elige el plan que mejor se adapte a tus necesidades de manejo de diabetes
+            </p>
+        </div>
+
+        <div class="pricing__grid">
+            <!-- Plan Básico -->
+            <div class="pricing-card">
+                <div class="pricing-card__header">
+                    <h3 class="pricing-card__name" data-i18n="pricing.basic.name">Plan Básico</h3>
+                    <div class="pricing-card__price">
+                        <span class="price-amount" data-i18n="pricing.basic.price">$10</span>
+                        <span class="price-period" data-i18n="pricing.basic.period">/mes</span>
+                    </div>
+                    <p class="pricing-card__description" data-i18n="pricing.basic.description">
+                        Perfecto para comenzar tu viaje de control de diabetes
+                    </p>
+                </div>
+
+                <div class="pricing-card__features">
+                    <ul class="features-list">
+                        <li data-i18n="pricing.basic.features.feature1">Seguimiento básico de glucosa</li>
+                        <li data-i18n="pricing.basic.features.feature2">Comunidad de pacientes</li>
+                        <li data-i18n="pricing.basic.features.feature3">Recordatorios de medicamentos</li>
+                        <li data-i18n="pricing.basic.features.feature4">Soporte por email</li>
+                        <li data-i18n="pricing.basic.features.feature5">1 consulta médica virtual</li>
+                    </ul>
+                </div>
+
+                <div class="pricing-card__footer">
+                    <a href="https://diabelife-application.netlify.app/" target="_blank" class="btn btn--secondary btn--large pricing-btn" data-i18n="pricing.basic.cta">
+                        Comenzar Plan Básico
                     </a>
                 </div>
-                <div class="hero__stats">
-                    <div class="stat">
-                        <h3 class="stat__number">50K+</h3>
-                        <p class="stat__label" data-i18n="hero.stats.users">Usuarios Activos</p>
-                    </div>
-                    <div class="stat">
-                        <h3 class="stat__number">1,200+</h3>
-                        <p class="stat__label" data-i18n="hero.stats.doctors">Médicos Certificados</p>
-                    </div>
-                    <div class="stat">
-                        <h3 class="stat__number">98%</h3>
-                        <p class="stat__label" data-i18n="hero.stats.satisfaction">Satisfacción</p>
-                    </div>
-                </div>
-            </div>
-            <div class="hero__image">
-                <div class="hero__illustration">
-                    <div class="floating-card card-1">
-                        <i class="fas fa-heartbeat"></i>
-                        <span>120 mg/dL</span>
-                    </div>
-                    <div class="floating-card card-2">
-                        <i class="fas fa-calendar-check"></i>
-                        <span data-i18n="hero.floating.appointment">Cita: Dr. García</span>
-                    </div>
-                    <div class="floating-card card-3">
-                        <i class="fas fa-users"></i>
-                        <span data-i18n="hero.floating.community">Comunidad: 5 nuevos posts</span>
-                    </div>
-                    <div class="hero__main-graphic">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================================
-         FEATURES SECTION - Características Principales
-         ========================================
-         - Muestra las 5 funcionalidades principales de DevsPros
-         - 1. Comunidad Activa - Conexión entre pacientes y médicos
-         - 2. Reportes Médicos - Historial clínico digital
-         - 3. Gestión de Citas - Sistema inteligente de citas
-         - 4. Glucómetro Virtual - Monitoreo de glucosa (diseño especial)
-         - 5. Vida Saludable - Seguimiento de actividad física y alimentación
-         - Cada tarjeta incluye ícono, título, descripción y lista de características
-    ======================================== -->
-    <section class="features" id="caracteristicas">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-i18n="features.title">Características Principales</h2>
-                <p class="section-description" data-i18n="features.description">
-                    Herramientas diseñadas específicamente para el manejo integral de la diabetes
-                </p>
             </div>
 
-            <div class="features__grid">
-                <!-- Community Posts Feature -->
-                <div class="feature-card">
-                    <div class="feature-card__icon">
-                        <i class="fas fa-comments"></i>
+            <!-- Plan Premium (Más Popular) -->
+            <div class="pricing-card pricing-card--popular">
+                <div class="pricing-card__badge" data-i18n="pricing.premium.popular">Más Popular</div>
+                <div class="pricing-card__header">
+                    <h3 class="pricing-card__name" data-i18n="pricing.premium.name">Plan Premium</h3>
+                    <div class="pricing-card__price">
+                        <span class="price-amount" data-i18n="pricing.premium.price">$30</span>
+                        <span class="price-period" data-i18n="pricing.premium.period">/mes</span>
                     </div>
-                    <h3 class="feature-card__title" data-i18n="features.community.title">Comunidad Activa</h3>
-                    <p class="feature-card__description" data-i18n="features.community.description">
-                        Conéctate con otros pacientes y médicos. Comparte experiencias, consejos y apoyo mutuo en nuestra comunidad global.
+                    <p class="pricing-card__description" data-i18n="pricing.premium.description">
+                        La opción más popular con herramientas avanzadas
                     </p>
-                    <ul class="feature-card__list">
-                        <li data-i18n="features.community.feature1">Posts de médicos especializados</li>
-                        <li data-i18n="features.community.feature2">Experiencias de pacientes reales</li>
-                        <li data-i18n="features.community.feature3">Grupos temáticos por tipo de diabetes</li>
-                        <li data-i18n="features.community.feature4">Moderación médica profesional</li>
+                </div>
+
+                <div class="pricing-card__features">
+                    <ul class="features-list">
+                        <li data-i18n="pricing.premium.features.feature1">Todo lo del Plan Básico</li>
+                        <li data-i18n="pricing.premium.features.feature2">Análisis avanzado de tendencias</li>
+                        <li data-i18n="pricing.premium.features.feature3">Reportes médicos detallados</li>
+                        <li data-i18n="pricing.premium.features.feature4">3 consultas médicas virtuales</li>
+                        <li data-i18n="pricing.premium.features.feature5">Acceso a especialistas</li>
+                        <li data-i18n="pricing.premium.features.feature6">Planes de alimentación personalizados</li>
                     </ul>
                 </div>
 
-                <!-- Medical Reports Feature -->
-                <div class="feature-card">
-                    <div class="feature-card__icon">
-                        <i class="fas fa-file-medical"></i>
+                <div class="pricing-card__footer">
+                    <a href="https://diabelife-application.netlify.app/" target="_blank" class="btn btn--primary btn--large pricing-btn" data-i18n="pricing.premium.cta">
+                        Elegir Plan Premium
+                    </a>
+                </div>
+            </div>
+
+            <!-- Plan Profesional -->
+            <div class="pricing-card">
+                <div class="pricing-card__header">
+                    <h3 class="pricing-card__name" data-i18n="pricing.professional.name">Plan Profesional</h3>
+                    <div class="pricing-card__price">
+                        <span class="price-amount" data-i18n="pricing.professional.price">$100</span>
+                        <span class="price-period" data-i18n="pricing.professional.period">/mes</span>
                     </div>
-                    <h3 class="feature-card__title" data-i18n="features.reports.title">Reportes Médicos</h3>
-                    <p class="feature-card__description" data-i18n="features.reports.description">
-                        Los médicos pueden crear reportes detallados sobre el progreso de sus pacientes y compartir información vital.
+                    <p class="pricing-card__description" data-i18n="pricing.professional.description">
+                        Para profesionales de la salud y uso clínico
                     </p>
-                    <ul class="feature-card__list">
-                        <li data-i18n="features.reports.feature1">Historial clínico digital</li>
-                        <li data-i18n="features.reports.feature2">Seguimiento de glucosa</li>
-                        <li data-i18n="features.reports.feature3">Análisis de tendencias</li>
-                        <li data-i18n="features.reports.feature4">Reportes exportables</li>
+                </div>
+
+                <div class="pricing-card__features">
+                    <ul class="features-list">
+                        <li data-i18n="pricing.professional.features.feature1">Todo lo del Plan Premium</li>
+                        <li data-i18n="pricing.professional.features.feature2">Panel de gestión de pacientes</li>
+                        <li data-i18n="pricing.professional.features.feature3">Consultas ilimitadas</li>
+                        <li data-i18n="pricing.professional.features.feature4">API para integración clínica</li>
+                        <li data-i18n="pricing.professional.features.feature5">Soporte prioritario 24/7</li>
+                        <li data-i18n="pricing.professional.features.feature6">Capacitación personalizada</li>
+                        <li data-i18n="pricing.professional.features.feature7">Reportes para seguros médicos</li>
                     </ul>
                 </div>
 
-                <!-- Appointments Feature -->
-                <div class="feature-card">
-                    <div class="feature-card__icon">
-                        <i class="fas fa-calendar-alt"></i>
-                    </div>
-                    <h3 class="feature-card__title" data-i18n="features.appointments.title">Gestión de Citas</h3>
-                    <p class="feature-card__description" data-i18n="features.appointments.description">
-                        Sistema inteligente de citas que facilita la comunicación entre médicos y pacientes.
-                    </p>
-                    <ul class="feature-card__list">
-                        <li data-i18n="features.appointments.feature1">Agenda automática de médicos</li>
-                        <li data-i18n="features.appointments.feature2">Recordatorios inteligentes</li>
-                        <li data-i18n="features.appointments.feature3">Teleconsultas disponibles</li>
-                        <li data-i18n="features.appointments.feature4">Historial de citas completo</li>
-                    </ul>
-                </div>
-
-                <!-- Virtual Glucometer Feature (Diseño Especial) -->
-                <div class="feature-card">
-                    <div class="feature-card__icon">
-                        <i class="fas fa-tint"></i>
-                    </div>
-                    <h3 class="feature-card__title" data-i18n="features.glucometer.title">Glucómetro Virtual</h3>
-                    <p class="feature-card__description" data-i18n="features.glucometer.description">
-                        Monitorea tus niveles de glucosa en tiempo real con nuestro innovador glucómetro virtual integrado a la plataforma.
-                    </p>
-                    <ul class="feature-card__list">
-                        <li data-i18n="features.glucometer.feature1">Sincronización automática con dispositivos</li>
-                        <li data-i18n="features.glucometer.feature2">Alertas de niveles críticos</li>
-                        <li data-i18n="features.glucometer.feature3">Gráficos de tendencias en tiempo real</li>
-                        <li data-i18n="features.glucometer.feature4">Registro automático de mediciones</li>
-                    </ul>
-                </div>
-
-                <!-- Healthy Lifestyle Feature (Nueva característica) -->
-                <div class="feature-card">
-                    <div class="feature-card__icon">
-                        <i class="fas fa-heartbeat"></i>
-                    </div>
-                    <h3 class="feature-card__title" data-i18n="features.lifestyle.title">Vida Saludable</h3>
-                    <p class="feature-card__description" data-i18n="features.lifestyle.description">
-                        Administra el registro y seguimiento de tu actividad física y alimentación diaria, con recomendaciones personalizadas para un estilo de vida saludable.
-                    </p>
-                    <ul class="feature-card__list">
-                        <li data-i18n="features.lifestyle.feature1">Seguimiento de pasos y ejercicios</li>
-                        <li data-i18n="features.lifestyle.feature2">Registro de alimentación diaria</li>
-                        <li data-i18n="features.lifestyle.feature3">Análisis de calorías y nutrientes</li>
-                        <li data-i18n="features.lifestyle.feature4">Recomendaciones personalizadas</li>
-                    </ul>
+                <div class="pricing-card__footer">
+                    <a href="https://diabelife-application.netlify.app/" target="_blank" class="btn btn--secondary btn--large pricing-btn" data-i18n="pricing.professional.cta">
+                        Contactar Ventas
+                    </a>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- ========================================
-         FAQ SECTION - Preguntas Frecuentes
-         ========================================
-         - Acordeón interactivo con preguntas y respuestas
-         - 5 preguntas principales sobre DevsPros
-         - Respuestas detalladas sobre funcionalidad, seguridad y uso
-         - Sistema de expansión/colapso con JavaScript
-         - Mejora la experiencia del usuario resolviendo dudas comunes
-    ======================================== -->
-    <section class="faq" id="faq">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-i18n="faq.title">Preguntas Frecuentes</h2>
-                <p class="section-description" data-i18n="faq.description">
-                    Encuentra respuestas a las preguntas más comunes sobre DevsPros
-                </p>
-            </div>
-
-            <div class="faq__content">
-                <div class="faq-accordion">
-                    <div class="faq-item">
-                        <div class="faq-question" onclick="toggleFAQ(this)">
-                            <h3 data-i18n="faq.questions.q1.question">¿Cómo puede DevsPros ayudarme a controlar mi diabetes?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p data-i18n="faq.questions.q1.answer">DevsPros ofrece herramientas integrales para monitoreo continuo de glucosa, recordatorios de medicamentos, acceso a especialistas médicos y una comunidad de apoyo. Nuestros algoritmos inteligentes analizan tus patrones de glucosa para brindarte recomendaciones personalizadas.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="faq-question" onclick="toggleFAQ(this)">
-                            <h3 data-i18n="faq.questions.q2.question">¿Es segura la información médica que comparto en la plataforma?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p data-i18n="faq.questions.q2.answer">Absolutamente. DevsPros cumple con todas las regulaciones HIPAA y utiliza encriptación de nivel bancario para proteger tu información médica. Tus datos se almacenan en servidores seguros y nunca se comparten sin tu consentimiento explícito.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="faq-question" onclick="toggleFAQ(this)">
-                            <h3 data-i18n="faq.questions.q3.question">¿Puedo usar DevsPros junto con mi médico actual?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p data-i18n="faq.questions.q3.answer">¡Por supuesto! DevsPros está diseñado para complementar, no reemplazar, la atención médica tradicional. Puedes compartir fácilmente tus reportes y datos con tu médico actual, y muchos profesionales ya forman parte de nuestra red.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="faq-question" onclick="toggleFAQ(this)">
-                            <h3 data-i18n="faq.questions.q4.question">¿Qué dispositivos de monitoreo son compatibles con DevsPros?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p data-i18n="faq.questions.q4.answer">DevsPros es compatible con los principales dispositivos de monitoreo continuo de glucosa (CGM) como Dexcom, FreeStyle Libre, y medidores tradicionales. También se integra con aplicaciones de salud populares y dispositivos wearables.</p>
-                        </div>
-                    </div>
-
-                    <div class="faq-item">
-                        <div class="faq-question" onclick="toggleFAQ(this)">
-                            <h3 data-i18n="faq.questions.q5.question">¿Puedo cancelar mi suscripción en cualquier momento?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p data-i18n="faq.questions.q5.answer">Sí, puedes cancelar tu suscripción en cualquier momento desde tu panel de usuario. No hay contratos a largo plazo ni penalizaciones por cancelación. Tu acceso continuará hasta el final del período de facturación actual.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="pricing__guarantee">
+            <p data-i18n="pricing.guarantee">
+                <i class="fas fa-shield-alt"></i>
+                Garantía de 30 días - Cancela cuando quieras
+            </p>
         </div>
-    </section>
-
-     <!-- ========================================
-      PRICING SECTION - Planes de Suscripción
-      ========================================
-      - Muestra 3 planes de precios: Básico, Premium y Profesional
-      - Plan Básico ($10/mes) - Para comenzar el control de diabetes
-      - Plan Premium ($30/mes) - Más popular, con herramientas avanzadas
-      - Plan Profesional ($100/mes) - Para profesionales de la salud
-      - Cada plan incluye lista de características y botón de acción
-      - Garantía de 30 días incluida
- ======================================== -->
- <section class="pricing" id="suscripciones">
-     <div class="container">
-         <div class="section-header">
-             <h2 class="section-title" data-i18n="pricing.title">Planes de Suscripción</h2>
-             <p class="section-description" data-i18n="pricing.description">
-                 Elige el plan que mejor se adapte a tus necesidades de manejo de diabetes
-             </p>
-         </div>
-
-         <div class="pricing__grid">
-             <!-- Plan Básico -->
-             <div class="pricing-card">
-                 <div class="pricing-card__header">
-                     <h3 class="pricing-card__name" data-i18n="pricing.basic.name">Plan Básico</h3>
-                     <div class="pricing-card__price">
-                         <span class="price-amount" data-i18n="pricing.basic.price">$10</span>
-                         <span class="price-period" data-i18n="pricing.basic.period">/mes</span>
-                     </div>
-                     <p class="pricing-card__description" data-i18n="pricing.basic.description">
-                         Perfecto para comenzar tu viaje de control de diabetes
-                     </p>
-                 </div>
-
-                 <div class="pricing-card__features">
-                     <ul class="features-list">
-                         <li data-i18n="pricing.basic.features.feature1">Seguimiento básico de glucosa</li>
-                         <li data-i18n="pricing.basic.features.feature2">Comunidad de pacientes</li>
-                         <li data-i18n="pricing.basic.features.feature3">Recordatorios de medicamentos</li>
-                         <li data-i18n="pricing.basic.features.feature4">Soporte por email</li>
-                         <li data-i18n="pricing.basic.features.feature5">1 consulta médica virtual</li>
-                     </ul>
-                 </div>
-
-                 <div class="pricing-card__footer">
-                     <a href="https://diabelife-frontend.netlify.app/" target="_blank" class="btn btn--secondary btn--large pricing-btn" data-i18n="pricing.basic.cta">
-                         Comenzar Plan Básico
-                     </a>
-                 </div>
-             </div>
-
-             <!-- Plan Premium (Más Popular) -->
-             <div class="pricing-card pricing-card--popular">
-                 <div class="pricing-card__badge" data-i18n="pricing.premium.popular">Más Popular</div>
-                 <div class="pricing-card__header">
-                     <h3 class="pricing-card__name" data-i18n="pricing.premium.name">Plan Premium</h3>
-                     <div class="pricing-card__price">
-                         <span class="price-amount" data-i18n="pricing.premium.price">$30</span>
-                         <span class="price-period" data-i18n="pricing.premium.period">/mes</span>
-                     </div>
-                     <p class="pricing-card__description" data-i18n="pricing.premium.description">
-                         La opción más popular con herramientas avanzadas
-                     </p>
-                 </div>
-
-                 <div class="pricing-card__features">
-                     <ul class="features-list">
-                         <li data-i18n="pricing.premium.features.feature1">Todo lo del Plan Básico</li>
-                         <li data-i18n="pricing.premium.features.feature2">Análisis avanzado de tendencias</li>
-                         <li data-i18n="pricing.premium.features.feature3">Reportes médicos detallados</li>
-                         <li data-i18n="pricing.premium.features.feature4">3 consultas médicas virtuales</li>
-                         <li data-i18n="pricing.premium.features.feature5">Acceso a especialistas</li>
-                         <li data-i18n="pricing.premium.features.feature6">Planes de alimentación personalizados</li>
-                     </ul>
-                 </div>
-
-                 <div class="pricing-card__footer">
-                     <a href="https://diabelife-frontend.netlify.app/" target="_blank" class="btn btn--primary btn--large pricing-btn" data-i18n="pricing.premium.cta">
-                         Elegir Plan Premium
-                     </a>
-                 </div>
-             </div>
-
-             <!-- Plan Profesional -->
-             <div class="pricing-card">
-                 <div class="pricing-card__header">
-                     <h3 class="pricing-card__name" data-i18n="pricing.professional.name">Plan Profesional</h3>
-                     <div class="pricing-card__price">
-                         <span class="price-amount" data-i18n="pricing.professional.price">$100</span>
-                         <span class="price-period" data-i18n="pricing.professional.period">/mes</span>
-                     </div>
-                     <p class="pricing-card__description" data-i18n="pricing.professional.description">
-                         Para profesionales de la salud y uso clínico
-                     </p>
-                 </div>
-
-                 <div class="pricing-card__features">
-                     <ul class="features-list">
-                         <li data-i18n="pricing.professional.features.feature1">Todo lo del Plan Premium</li>
-                         <li data-i18n="pricing.professional.features.feature2">Panel de gestión de pacientes</li>
-                         <li data-i18n="pricing.professional.features.feature3">Consultas ilimitadas</li>
-                         <li data-i18n="pricing.professional.features.feature4">API para integración clínica</li>
-                         <li data-i18n="pricing.professional.features.feature5">Soporte prioritario 24/7</li>
-                         <li data-i18n="pricing.professional.features.feature6">Capacitación personalizada</li>
-                         <li data-i18n="pricing.professional.features.feature7">Reportes para seguros médicos</li>
-                     </ul>
-                 </div>
-
-                 <div class="pricing-card__footer">
-                     <a href="https://diabelife-frontend.netlify.app/" target="_blank" class="btn btn--secondary btn--large pricing-btn" data-i18n="pricing.professional.cta">
-                         Contactar Ventas
-                     </a>
-                 </div>
-             </div>
-         </div>
-
-         <div class="pricing__guarantee">
-             <p data-i18n="pricing.guarantee">
-                 <i class="fas fa-shield-alt"></i>
-                 Garantía de 30 días - Cancela cuando quieras
-             </p>
-         </div>
-     </div>
- </section>
-
- <!-- ========================================
-      CTA SECTION - Llamada a la Acción
-      ========================================
-      - Sección de conversión principal
-      - Invita a los usuarios a registrarse
-      - Dos botones diferenciados: "Soy Paciente" y "Soy Médico"
-      - Fondo con gradiente llamativo
-      - Texto motivacional para generar acción
- ======================================== -->
- <section class="cta">
-     <div class="container">
-         <div class="cta__content">
-             <h2 class="cta__title" data-i18n="cta.title">
-                 ¿Listo para transformar tu manejo de la diabetes?
-             </h2>
-             <p class="cta__description" data-i18n="cta.description">
-                 Únete a miles de pacientes y médicos que ya confían en DevsPros para mejorar su calidad de vida.
-             </p>
-             <div class="cta__actions">
-                 <a href="https://diabelife-frontend.netlify.app/" target="_blank" class="btn btn--primary btn--large" data-i18n="cta.patient">
-                     <i class="fas fa-user"></i>
-                     Soy Paciente
-                 </a>
-                 <a href="https://diabelife-frontend.netlify.app/" target="_blank" class="btn btn--secondary btn--large" data-i18n="cta.doctor">
-                     <i class="fas fa-user-md"></i>
-                     Soy Médico
-                 </a>
-             </div>
-         </div>
-     </div>
- </section>
-
- <!-- ========================================
-         TEAM SECTION - Nuestro Equipo
-         ========================================
-         - Presenta al equipo de desarrollo
-         - 5 miembros del equipo con fotos y nombres
-         - Efectos hover en las fotos del equipo
-         - Diseño responsivo para dispositivos móviles
-    ======================================== -->
-    <section class="team" id="equipo">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-i18n="team.title">Nuestro Equipo</h2>
-                <p class="section-description" data-i18n="team.description">
-                    Conoce a los desarrolladores apasionados que están creando DevsPros
-                </p>
-            </div>
-
-            <div class="team__lineup">
-                <div class="team-member">
-                    <div class="team-member__photo">
-                        <img src="images/Iker.jpg" alt="Iker Gabriel">
-                    </div>
-                    <h3 class="team-member__name" data-i18n="team.members.member1.name">Iker Barturen</h3>
-                </div>
-
-                <div class="team-member">
-                    <div class="team-member__photo">
-                        <img src="images/Gabriel.jpg" alt="Gabriel Mamani">
-                    </div>
-                    <h3 class="team-member__name" data-i18n="team.members.member2.name">Gabriel Mamani</h3>
-                </div>
-
-                <div class="team-member">
-                    <div class="team-member__photo">
-                        <img src="images/Stephano.jpg" alt="Stephano Espinoza">
-                    </div>
-                    <h3 class="team-member__name" data-i18n="team.members.member3.name">Stephano Espinoza</h3>
-                </div>
-
-                <div class="team-member">
-                    <div class="team-member__photo">
-                        <img src="images/Diego.jpg" alt="Diego Véliz">
-                    </div>
-                    <h3 class="team-member__name" data-i18n="team.members.member4.name">Diego Véliz</h3>
-                </div>
-
-                <div class="team-member">
-                    <div class="team-member__photo">
-                        <img src="images/Andres.jpg" alt="Andres Torres">
-                    </div>
-                    <h3 class="team-member__name" data-i18n="team.members.member5.name">Andres Torres</h3>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========================================
-         VIDEOS SECTION - Videos Destacados
-         ========================================
-         - Dos videos colocados de forma responsiva
-         - Texto descriptivo debajo (en móvil) o al costado (en pantallas grandes)
-         - Reemplaza los `VIDEO_ID_1` y `VIDEO_ID_2` por los IDs reales de YouTube
-    ======================================== -->
-    <div class="videos__grid">
-
-        <div class="video-card">
-            <div class="video-wrapper">
-                <iframe width="560" height="315"
-                        src="https://www.youtube.com/embed/MBNFpJ1MNGU"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen>
-                </iframe>
-            </div>
-            <div class="video-caption">
-                <h3>About Team</h3>
-            </div>
-        </div>
-
-        <div class="video-card">
-            <div class="video-wrapper">
-                <iframe width="560" height="315"
-                        src="https://www.youtube.com/embed/Oo1iA90Pi_w"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen>
-                </iframe>
-            </div>
-            <div class="video-caption">
-                <h3>About Product</h3>
-            </div>
-        </div>
-
     </div>
+</section>
 
-    <!-- ========================================
-             FOOTER - Pie de Página
-             ========================================
-             - Información completa de la empresa
-             - Logo y descripción de DevsPros
-             - Enlaces organizados por categorías (Producto, Soporte, Empresa, Legal)
-             - Redes sociales (Facebook, Twitter, Instagram, LinkedIn)
-             - Información de derechos de autor y descargo de responsabilidad médica
-             - También funciona como sección de contacto (#contacto)
-        ======================================== -->
-    <footer class="footer" id="contacto">
-        <div class="container">
-            <div class="footer__content">
-                <div class="footer__brand">
-                    <div class="footer__logo">
-                        <img src="images/LogoStartup.png" alt="DevsPros">
-                        <span>DevsPros</span>
-                    </div>
-                    <p data-i18n="footer.description">
-                        Transformando el cuidado de la diabetes a través de la tecnología y la comunidad.
-                    </p>
-                    <div class="footer__social">
-                        <a href="https://www.facebook.com/devspros" class="social-link" aria-label="Facebook">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="https://www.twitter.com/devspros" class="social-link" aria-label="Twitter">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="https://www.instagram.com/devspros" class="social-link" aria-label="Instagram">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/company/devspros" class="social-link" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="footer__links">
-                    <div class="footer__column">
-                        <h4 data-i18n="footer.product">Producto</h4>
-                        <ul>
-                            <li><a href="#caracteristicas" data-i18n="footer.features">Características</a></li>
-                            <li><a href="#suscripciones" data-i18n="footer.pricing">Suscripciones</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer__column">
-                        <h4 data-i18n="footer.support">Soporte</h4>
-                        <ul>
-                            <li><a href="#" data-i18n="footer.help">Centro de Ayuda</a></li>
-                            <li><a href="#contacto" data-i18n="footer.contact_support">Contactar Soporte</a></li>
-                            <li><a href="#" data-i18n="footer.community_support">Comunidad</a></li>
-                            <li><a href="#" data-i18n="footer.tutorials">Tutoriales</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer__column">
-                        <h4 data-i18n="footer.company">Empresa</h4>
-                        <ul>
-                            <li><a href="#equipo" data-i18n="footer.about">Sobre Nosotros</a></li>
-                            <li><a href="#" data-i18n="footer.careers">Carreras</a></li>
-                            <li><a href="#" data-i18n="footer.press">Prensa</a></li>
-                            <li><a href="#" data-i18n="footer.blog">Blog</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="footer__column">
-                        <h4 data-i18n="footer.legal">Legal</h4>
-                        <ul>
-                            <li><a href="#" data-i18n="footer.privacy">Privacidad</a></li>
-                            <li><a href="#" data-i18n="footer.terms">Términos</a></li>
-                            <li><a href="#" data-i18n="footer.cookies">Cookies</a></li>
-                            <li><a href="#" data-i18n="footer.compliance">Cumplimiento</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="footer__bottom">
-                <p>&copy; 2025 DevsPros. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
-                <p class="footer__disclaimer" data-i18n="footer.disclaimer">
-                    DevsPros no reemplaza el consejo médico profesional. Siempre consulte con su médico.
-                </p>
+<!-- ========================================
+     CTA SECTION - Llamada a la Acción
+     ========================================
+     - Sección de conversión principal
+     - Invita a los usuarios a registrarse
+     - Dos botones diferenciados: "Soy Paciente" y "Soy Médico"
+     - Fondo con gradiente llamativo
+     - Texto motivacional para generar acción
+======================================== -->
+<section class="cta">
+    <div class="container">
+        <div class="cta__content">
+            <h2 class="cta__title" data-i18n="cta.title">
+                ¿Listo para transformar tu manejo de la diabetes?
+            </h2>
+            <p class="cta__description" data-i18n="cta.description">
+                Únete a miles de pacientes y médicos que ya confían en DevsPros para mejorar su calidad de vida.
+            </p>
+            <div class="cta__actions">
+                <a href="https://diabelife-application.netlify.app/" target="_blank" class="btn btn--primary btn--large" data-i18n="cta.patient">
+                    <i class="fas fa-user"></i>
+                    Soy Paciente
+                </a>
+                <a href="https://diabelife-application.netlify.app/" target="_blank" class="btn btn--secondary btn--large" data-i18n="cta.doctor">
+                    <i class="fas fa-user-md"></i>
+                    Soy Médico
+                </a>
             </div>
         </div>
-    </footer>
+    </div>
+</section>
 
-    <!-- ========================================
-         SCRIPTS - Archivos JavaScript
+<!-- ========================================
+        TEAM SECTION - Nuestro Equipo
+        ========================================
+        - Presenta al equipo de desarrollo
+        - 5 miembros del equipo con fotos y nombres
+        - Efectos hover en las fotos del equipo
+        - Diseño responsivo para dispositivos móviles
+   ======================================== -->
+<section class="team" id="equipo">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title" data-i18n="team.title">Nuestro Equipo</h2>
+            <p class="section-description" data-i18n="team.description">
+                Conoce a los desarrolladores apasionados que están creando DevsPros
+            </p>
+        </div>
+
+        <div class="team__lineup">
+            <div class="team-member">
+                <div class="team-member__photo">
+                    <img src="images/Iker.jpg" alt="Iker Gabriel">
+                </div>
+                <h3 class="team-member__name" data-i18n="team.members.member1.name">Iker Barturen</h3>
+            </div>
+
+            <div class="team-member">
+                <div class="team-member__photo">
+                    <img src="images/Gabriel.jpg" alt="Gabriel Mamani">
+                </div>
+                <h3 class="team-member__name" data-i18n="team.members.member2.name">Gabriel Mamani</h3>
+            </div>
+
+            <div class="team-member">
+                <div class="team-member__photo">
+                    <img src="images/Stephano.jpg" alt="Stephano Espinoza">
+                </div>
+                <h3 class="team-member__name" data-i18n="team.members.member3.name">Stephano Espinoza</h3>
+            </div>
+
+            <div class="team-member">
+                <div class="team-member__photo">
+                    <img src="images/Diego.jpg" alt="Diego Véliz">
+                </div>
+                <h3 class="team-member__name" data-i18n="team.members.member4.name">Diego Véliz</h3>
+            </div>
+
+            <div class="team-member">
+                <div class="team-member__photo">
+                    <img src="images/Andres.jpg" alt="Andres Torres">
+                </div>
+                <h3 class="team-member__name" data-i18n="team.members.member5.name">Andres Torres</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+     VIDEOS SECTION - Videos Destacados
+     ========================================
+     - Dos videos colocados de forma responsiva
+     - Texto descriptivo debajo (en móvil) o al costado (en pantallas grandes)
+     - Reemplaza los `VIDEO_ID_1` y `VIDEO_ID_2` por los IDs reales de YouTube
+======================================== -->
+<section class="videos" id="videos">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Videos</h2>
+            <p class="section-description">Abouy Team y About Product.</p>
+        </div>
+
+        <div class="videos__grid">
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <!-- Ejemplo con embed de YouTube; cambia el src por tu video o usa <video> -->
+                    <iframe src="https://www.youtube.com/embed/MBNFpJ1MNGU" title="Video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-caption">
+                    <h3>About Team</h3>
+                    <p>Conoce al equipo de DevsPros y descubre la pasión que nos impulsa a crear soluciones innovadoras para el manejo de la diabetes.</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <div class="video-wrapper">
+                    <iframe src="https://www.youtube.com/embed/Oo1iA90Pi_w" title="Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-caption">
+                    <h3>About Product</h3>
+                    <p>Explora las características principales de DiabeLife y cómo nuestra plataforma puede transformar tu experiencia en el manejo de la diabetes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========================================
+         FOOTER - Pie de Página
          ========================================
-         - i18n.js: Sistema de internacionalización (cambio de idioma)
-         - main.js: Funcionalidad principal (animaciones, interacciones, FAQ)
-         - Se cargan al final para optimizar el rendimiento
+         - Información completa de la empresa
+         - Logo y descripción de DevsPros
+         - Enlaces organizados por categorías (Producto, Soporte, Empresa, Legal)
+         - Redes sociales (Facebook, Twitter, Instagram, LinkedIn)
+         - Información de derechos de autor y descargo de responsabilidad médica
+         - También funciona como sección de contacto (#contacto)
     ======================================== -->
-    <script src="js/i18n.js"></script>
-    <script src="js/main.js"></script>
+<footer class="footer" id="contacto">
+    <div class="container">
+        <div class="footer__content">
+            <div class="footer__brand">
+                <div class="footer__logo">
+                    <img src="images/LogoStartup.png" alt="DevsPros">
+                    <span>DevsPros</span>
+                </div>
+                <p data-i18n="footer.description">
+                    Transformando el cuidado de la diabetes a través de la tecnología y la comunidad.
+                </p>
+                <div class="footer__social">
+                    <a href="https://www.facebook.com/devspros" class="social-link" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.twitter.com/devspros" class="social-link" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/devspros" class="social-link" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/devspros" class="social-link" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer__links">
+                <div class="footer__column">
+                    <h4 data-i18n="footer.product">Producto</h4>
+                    <ul>
+                        <li><a href="#caracteristicas" data-i18n="footer.features">Características</a></li>
+                        <li><a href="#suscripciones" data-i18n="footer.pricing">Suscripciones</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <h4 data-i18n="footer.support">Soporte</h4>
+                    <ul>
+                        <li><a href="#" data-i18n="footer.help">Centro de Ayuda</a></li>
+                        <li><a href="#contacto" data-i18n="footer.contact_support">Contactar Soporte</a></li>
+                        <li><a href="#" data-i18n="footer.community_support">Comunidad</a></li>
+                        <li><a href="#" data-i18n="footer.tutorials">Tutoriales</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <h4 data-i18n="footer.company">Empresa</h4>
+                    <ul>
+                        <li><a href="#equipo" data-i18n="footer.about">Sobre Nosotros</a></li>
+                        <li><a href="#" data-i18n="footer.careers">Carreras</a></li>
+                        <li><a href="#" data-i18n="footer.press">Prensa</a></li>
+                        <li><a href="#" data-i18n="footer.blog">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__column">
+                    <h4 data-i18n="footer.legal">Legal</h4>
+                    <ul>
+                        <li><a href="#" data-i18n="footer.privacy">Privacidad</a></li>
+                        <li><a href="#" data-i18n="footer.terms">Términos</a></li>
+                        <li><a href="#" data-i18n="footer.cookies">Cookies</a></li>
+                        <li><a href="#" data-i18n="footer.compliance">Cumplimiento</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <p>&copy; 2025 DevsPros. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+            <p class="footer__disclaimer" data-i18n="footer.disclaimer">
+                DevsPros no reemplaza el consejo médico profesional. Siempre consulte con su médico.
+            </p>
+        </div>
+    </div>
+</footer>
+
+<!-- ========================================
+     SCRIPTS - Archivos JavaScript
+     ========================================
+     - i18n.js: Sistema de internacionalización (cambio de idioma)
+     - main.js: Funcionalidad principal (animaciones, interacciones, FAQ)
+     - Se cargan al final para optimizar el rendimiento
+======================================== -->
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
 
